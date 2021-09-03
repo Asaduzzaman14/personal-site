@@ -1,0 +1,491 @@
+*{
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    margin:0;
+}
+
+             /* navbar start from hear */
+.nav-hading h2{
+    font-size:2.5rem;
+    text-align:center;
+    color:white;
+    margin:0; 
+    padding-top:10px;
+
+}
+h2{
+    font-size:1.5rem;
+    text-align:center;
+
+}
+
+
+a{
+    font-size:1.2rem;
+    color:white;
+   text-decoration:none; 
+}
+p{
+    font-size:1.2rem;
+    text-align:center; 
+
+}
+.dotted-hr{
+    border:dotted 6px white;
+    border-bottom:none;
+    width:50%;
+    margin:20px auto;
+
+}
+
+
+
+    [class*="col-"]{
+    float:left;
+    padding:10px;
+
+}
+        /* for mobile */
+    [class*="col-"]{
+    width:100%;
+
+}
+
+
+.nav-bar{
+
+    background-color:#086873;
+    padding:1% 7%;
+    text-align:center;
+}
+
+.nav-link{
+    display:flex;
+    flex-direction:column;
+    text-transform: capitalize;
+}
+ .nav-link a{
+    background-color:#042d32;
+    border-radius:10px;
+  
+    margin:10px 0;
+    padding:10px;
+    }
+
+    .nav-link a:hover{
+        background-color: gray;;
+        box-shadow:0 0 15px 5px; 
+        cursor:pointer;
+    }
+
+
+.nav-bar::after{
+    content:'';
+    clear: both;
+    display:table;
+}
+
+/* navbar-ends hear */
+
+
+
+                   /* profile start from hear */
+    
+.profile{
+   position:relative;
+    padding:100px 20px;
+    text-align:center;
+}
+.top-weather-icon{
+    width:100px;
+       position:absolute;
+     top:20px;
+    right:50px;
+    transition: transform 2s;
+}
+
+.profile .top-weather-icon:hover{
+    transform: rotate(360deg);
+
+}
+
+.profile-heading h1{
+
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+
+}
+.profile-heading p{
+    color:gray;
+    margin:0 auto 20px auto;
+    width:90%;
+    text-align: center;
+
+}
+
+.bottom-weather-icon{
+    width:100px;
+   position:absolute;
+     bottom:20px;
+    left:50px;
+    transition: transform 2s;
+}
+
+.profile .bottom-weather-icon:hover{
+    transform: rotate(360deg);
+
+}
+  
+.profile::after{
+    content: '';
+    display: table;
+    clear:both;
+}
+
+     /* about-me design start hear  */
+
+.about-me{
+    background-color:#086873;
+    padding: 1% 7%;
+    color:white;
+    text-align:center;
+    font-family: 'montserrat', sans-serif;
+}
+.aboutme-image img{
+    border:4px solid white;
+    width: 160px;
+    height:170px;
+    border-radius:50%;
+
+}
+
+.fb-button{
+    background-color:#086873;
+    color:azure;
+    border-radius:10px;
+    font-size:1rem;
+    padding: 5px 10px;
+    box-shadow: 0 0 5px 4px;
+    cursor:pointer;
+    border:none;
+}
+.about-me::after{
+    content:'';
+    display:table;
+    clear:both;
+
+}
+        /* about-me design start hear  */
+
+/* card design start hear  */
+
+
+.work-experians{
+ padding: 1% 1%;
+}
+
+
+ .card{     
+    background-color:#b5b5b5;
+    padding:10px;
+    border-radius:5px;
+    transition: 0.3s;
+    height:600px;
+   
+
+
+}
+
+.card:hover{
+    box-shadow: 0 4px 5px 8px;
+
+}
+
+
+.card-icon img{
+    width:60px;
+    text-align:center;
+    margin-left:45%;
+    border:5px solid white;
+    border-radius:50px;
+    padding:5px;
+
+}
+
+.card-title h2{ 
+    background-color: rgb(103, 94, 94);
+    color:white;
+    padding:10px;
+
+}
+
+.skills-continer{   
+    padding-right:45px;
+}
+
+    .skills-continer li{
+        list-style: none;   
+        font-weight: bolder;
+        margin: 30px 10px;
+        text-transform: uppercase;
+        position:relative;
+
+
+
+
+    }
+    .skills-continer li::before{    
+        content:'';
+        position:absolute;
+        top:calc(100% + 5px);
+        width:100%;
+        height:10px;
+        background-color: rgb(108, 108, 145, .5); 
+        border-radius: 50px;
+    }
+    
+    .skills-continer li::after{    
+        content:'';
+        position:absolute;
+        top:calc(100% + 5px);
+        width:0;
+        height:10px;
+        left:0;
+        background-color: rgba(82, 82, 185, 0.5); 
+        border-radius: 50px;
+       
+
+        animation-duration: 2s;
+        animation-delay:1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 5;
+
+
+    }
+
+
+
+.skills-continer li.html::after{
+    animation-name: html;
+
+}
+
+@keyframes html {
+    to{
+    width:90%;
+    }
+}
+    
+
+
+    
+.skills-continer li.css::after{
+    animation-name: css;
+
+}
+
+@keyframes css {
+    to{
+    width:75%;
+    }
+}
+  
+
+    
+.skills-continer li.js::after{
+    animation-name: js;
+
+}
+
+@keyframes js {
+    to{
+    width:90%;
+    }
+}
+  
+
+    
+.skills-continer li.boot::after{
+    animation-name: boot;
+
+}
+
+@keyframes boot {
+    to{
+    width:70%;
+    }
+}
+  
+
+    
+.skills-continer li.jquary::after{
+    animation-name: jquary;
+
+}
+
+@keyframes jquary {
+    to{
+    width:50%;
+    }
+}
+  
+
+    
+.skills-continer li.react::after{
+    animation-name: react;
+
+}
+
+@keyframes react {
+    to{
+    width:90%;
+    }
+}
+  
+
+    /* .profosonal-experians::after{
+        clear:both;
+        display:table;
+        content:'';
+
+    }
+    .education-column::after{
+        clear:both;
+        display:table;
+        content:'';
+
+
+    }
+    .skills::after{
+        clear:both;
+        display:table;
+        content:'';
+
+
+    } */
+  /* card design end hear  */
+
+ /* achivement contuct starts hear  */
+.div{
+padding:10px;
+
+}
+.achivement-continer{       
+    padding:10px;
+    background-color:rgb(40, 179, 217);
+   
+    clear:both;
+
+
+}
+
+.contuct-continer{  
+    text-align: center;
+    padding:2% 2%;
+
+
+}
+
+
+.contuct-continer input,textarea{   
+    width:100%;
+    padding:5px 2px;
+    border-radius:5px;
+    border:none;
+    font-size: 1rem;
+    font-family: serif, monospace;
+    resize:none;
+
+}
+
+.contuct-continer button{   
+    margin:10px;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    width:100px;
+    background-color: #042d32;
+    color:white;
+
+
+}
+.contuct-links{     
+    text-align:center
+
+
+
+}
+.media-buttons .btn{   
+    background-color:white;
+    border:none;
+    border-radius:100%;
+    font-size:30px;
+    width:50px;
+    height:50px;
+    margin:10px;
+    padding:5px;
+    cursor:pointer;
+    
+}
+.media-buttons .btn:hover{
+    background-color: #cac7c7;
+
+}
+
+.achivement-continer::after{
+    clear:both;     
+    display:table;
+    content:'';
+}
+ /* achivement contuct ends hear  */
+
+
+/* footer start from hrear */
+
+.footer{
+background-color:black;     
+color:white;
+padding:10px;
+text-align:center;
+font-size:0.8rem;
+
+}
+.footer-menu a{   
+    display:block;
+    font-size: 1rem;
+    margin:15px 0;
+
+
+
+
+}
+
+.footer-menu a:hover{   
+    color: gray;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer::after{     
+    display:table;
+    content:'';
+    clear:both;
+
+
+
+}
